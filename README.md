@@ -21,7 +21,7 @@ git clone https://github.com/ArtoriasCode/docker-terraria.git
 ## ⚙️ Server configuration
 1) Navigate to the project directory:
 ```
-cd docker-terraria
+cd docker-terraria-vanilla
 ```
 2) Create a `.env` file:
 ```
@@ -53,7 +53,7 @@ mkdir -p Terraria/Worlds
 ```
 scp path_to_file server_user@server_id:/path_to_project/Terraria/Worlds
 ```
-Example: `scp /home/artorias/myworld.wld root@127.0.0.1:/root/docker-terraria/Terraria/Worlds`
+Example: `scp /home/artorias/myworld.wld root@127.0.0.1:/root/docker-terraria-vanilla/Terraria/Worlds`
 
 ## 🔨 Installation
 1) Grant execution rights to the installation script:
