@@ -45,7 +45,7 @@ nano data/serverconfig.txt
 9) Save the file by pressing `Ctrl + O`, then close the file by pressing `Ctrl + X`.
 
 ## 🌍 Custom world
-1) Create a directory with Terraria worlds:
+1) Create a directory with Terraria worlds in the project root directory:
 ```
 mkdir -p Terraria/Worlds
 ```
