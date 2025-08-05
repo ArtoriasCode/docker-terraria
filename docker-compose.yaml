@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  terraria:
+    build:
+      context: .
+      args:
+        TERRARIA_VERSION: ${TERRARIA_VERSION}
+    container_name: terraria-server
+    ports:
+      - "${TERRARIA_PORT}:7777"
+    env_file:
+      - .env
+    environment:
+      - TERRARIA_PORT=${TERRARIA_PORT}
+    volumes:
+      - ./data:/data
+      - ./Terraria:/root/.local/share/Terraria
+    stdin_open: true
+    tty: true
+    stop_grace_period: 30s
+    restart: unless-stopped
