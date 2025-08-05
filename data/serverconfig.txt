@@ -29,7 +29,7 @@ port=7777
 password=
 
 # Set the message of the day
-motd=Created by ArtoriasCode
+motd=Created by ArtoriasCode - https://github.com/ArtoriasCode/docker-terraria
 
 # Sets the folder where world files will be stored
 # WARNING: Environment variables ($HOME, ~) don't work yet, so the stated folder will be relatively created in "serverfiles" if the given path is relative.
