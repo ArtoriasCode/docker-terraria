@@ -44,6 +44,17 @@ nano data/serverconfig.txt
 8) Specify the desired settings such as password, world name, number of players, etc.
 9) Save the file by pressing `Ctrl + O`, then close the file by pressing `Ctrl + X`.
 
+## 🌍 Custom world
+1) Create a directory with Terraria worlds:
+```
+mkdir -p Terraria/Worlds
+```
+2) Upload your world files (.wld, .bak, etc.) to it:
+```
+scp path_to_file server_user@server_id:/path_to_project/Terraria/Worlds
+```
+Example: `scp /home/artorias/myworld.wld root@127.0.0.1:/root/docker-terraria/Terraria/Worlds`
+
 ## 🔨 Installation
 1) Grant execution rights to the installation script:
 ```
@@ -55,4 +66,4 @@ chmod +x scripts/install.sh
 ```
 3) Wait until the installation is complete.
 
-To access the server in the game, enter the IP address of your VPS server, the port specified in `.env`, and the password specified in `serverconfig.txt`.
+To access the server in the game, enter the IP address of your VPS server, the port specified in `.env`, and the password specified in `serverconfig.txt`, if specified.
