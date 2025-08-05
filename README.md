@@ -49,7 +49,7 @@ nano data/serverconfig.txt
 ```
 mkdir -p Terraria/Worlds
 ```
-2) Upload your world files (.wld, .bak, etc.) to it:
+2) Upload your world files (`.wld`, `.bak`, etc.) to it:
 ```
 scp path_to_file server_user@server_id:/path_to_project/Terraria/Worlds
 ```
