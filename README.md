@@ -1,5 +1,5 @@
 ## 🛠 Terraria dedicated server in Docker
-A lightweight and configurable Docker setup for hosting a dedicated **vanilla** Terraria server.
+A simple and configurable Docker setup for hosting a dedicated **vanilla** Terraria server.
 - ⚙️ Fully configurable via `.env` and `serverconfig.txt`
 - 💾 Automatic start via `screen` for auto-saves
 - 🔁 The ability to generate worlds and upload your own
