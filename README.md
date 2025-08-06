@@ -20,7 +20,7 @@ sudo apt install git
 ```
 2) Download the repository:
 ```
-git clone https://github.com/ArtoriasCode/docker-terraria.git
+git clone --branch tmodloader https://github.com/ArtoriasCode/docker-terraria.git
 ```
 
 ## ⚙️ Server configuration
@@ -43,7 +43,7 @@ sudo apt install nano
 ```
 nano .env
 ```
-5) Specify the desired version of tModLoader **(without dots)**.
+5) Specify the desired version of [tModLoader](https://github.com/tModLoader/tModLoader/releases) **(without v)**.
 6) Save the file by pressing `Ctrl + O`, then close the file by pressing `Ctrl + X`.
 7) Open the `serverconfig.txt` file for editing:
 ```
@@ -68,6 +68,35 @@ scp path_to_file server_user@server_id:/path_to_project/Terraria/Worlds
 > Example: `scp /home/artorias/myworld.wld root@127.0.0.1:/root/docker-terraria/Terraria/Worlds`
 
 3) Change the name of the world in `serverconfig.txt` in the `world` field.
+
+## 📂 Adding mods
+> [!NOTE]
+> To add game mods, follow the instructions below.
+
+1) Open the `mods.txt` file for editing:
+```
+nano data/mods.txt
+```
+2) Specify the mod IDs from Steam Workshop (one per line).
+> [!TIP]
+> Example: https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072
+> Mod ID: `2824688072`
+3) Save the file by pressing `Ctrl + O`, then close the file by pressing `Ctrl + X`.
+
+## 📂 Adding mod configs
+> [!NOTE]
+> To add game mods configurations, follow the instructions below.
+
+1) Create a directory with tModLoader mod configs in the project root directory:
+```
+mkdir -p Terraria/tModLoader/ModConfigs
+```
+2) Upload your config files (`.json`) to it:
+```
+scp path_to_file server_user@server_id:/path_to_project/Terraria/tModLoader/ModConfigs
+```
+> [!TIP]
+> Example: `scp /home/artorias/ModConfig.json root@127.0.0.1:/root/docker-terraria/Terraria/tModLoader/ModConfigs`
 
 ## 🔨 Installation
 > [!NOTE]
