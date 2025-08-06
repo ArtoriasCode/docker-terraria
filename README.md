@@ -86,7 +86,7 @@ nano data/mods.txt
 
 ## 📂 Adding mod configs
 > [!NOTE]
-> To add game mods configurations, follow the instructions below.
+> To add game mod configurations, follow the instructions below.
 
 1) Create a directory with tModLoader mod configs in the project root directory:
 ```
