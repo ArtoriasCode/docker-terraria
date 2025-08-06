@@ -80,6 +80,7 @@ nano data/mods.txt
 2) Specify the mod IDs from Steam Workshop (one per line).
 > [!TIP]
 > Example: https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072
+>
 > Mod ID: `2824688072`
 3) Save the file by pressing `Ctrl + O`, then close the file by pressing `Ctrl + X`.
 
