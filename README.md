@@ -1,10 +1,11 @@
-## 🛠 Terraria dedicated server in Docker
-A simple and configurable Docker setup for hosting a dedicated **vanilla** Terraria server.
+## 🛠 tModLoader dedicated server in Docker
+A simple and configurable Docker setup for hosting a dedicated **modded** Terraria server.
 - ⚙️ Fully configurable via `.env` and `serverconfig.txt`
 - 💾 Automatic start via `screen` for auto-saves
 - 🗺️ The ability to generate worlds and upload your own
 - 🚀 Simple and fast deployment using Docker Compose
 - 🔁 Automatic startup after VPS startup / restart
+- 💻 Automatic mods download
 
 ## 📥 Project download
 > [!NOTE]
@@ -24,7 +25,7 @@ git clone https://github.com/ArtoriasCode/docker-terraria.git
 
 ## ⚙️ Server configuration
 > [!NOTE]
-> To create the necessary files for the Terraria server and configure it according to your preferences, follow the instructions below.
+> To create the necessary files for the tModLoader server and configure it according to your preferences, follow the instructions below.
 
 1) Navigate to the project directory:
 ```
@@ -42,7 +43,7 @@ sudo apt install nano
 ```
 nano .env
 ```
-5) Specify the desired version of Terraria **(without dots)**.
+5) Specify the desired version of tModLoader **(without dots)**.
 6) Save the file by pressing `Ctrl + O`, then close the file by pressing `Ctrl + X`.
 7) Open the `serverconfig.txt` file for editing:
 ```
@@ -70,7 +71,7 @@ scp path_to_file server_user@server_id:/path_to_project/Terraria/Worlds
 
 ## 🔨 Installation
 > [!NOTE]
-> To start the automatic installation of the Terraria server in Docker, follow the instructions below.
+> To start the automatic installation of the tModLoader server in Docker, follow the instructions below.
 
 1) Grant execution rights to the installation script:
 ```

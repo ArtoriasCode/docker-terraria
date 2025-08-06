@@ -1,16 +1,21 @@
 FROM debian:bullseye
 
-ARG TERRARIA_VERSION
+ARG TML_VERSION
 
 RUN apt-get update && \
-    apt-get install -y wget unzip lib32gcc-s1 screen && \
+    apt-get install -y wget unzip lib32gcc-s1 screen ca-certificates libicu-dev && \
+    mkdir -p /opt/steamcmd && \
+    cd /opt/steamcmd && \
+    wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && \
+    tar -xzf steamcmd_linux.tar.gz && \
+    rm steamcmd_linux.tar.gz && \
+    ln -s /opt/steamcmd/steamcmd.sh /usr/local/bin/steamcmd && \
     mkdir -p /opt/terraria && \
     cd /opt/terraria && \
-    wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-${TERRARIA_VERSION}.zip -O server.zip && \
-    unzip server.zip && \
-    cp -r $(find . -type d -name "Linux")/* . && \
-    chmod +x /opt/terraria/TerrariaServer.bin.x86_64 && \
-    rm -rf server.zip
+    wget https://github.com/tModLoader/tModLoader/releases/download/v${TML_VERSION}/tModLoader.zip -O tml.zip && \
+    unzip tml.zip && \
+    chmod +x /opt/terraria/start-tModLoaderServer.sh && \
+    rm -rf tml.zip
 
 WORKDIR /opt/terraria
 

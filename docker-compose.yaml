@@ -5,7 +5,7 @@ services:
     build:
       context: .
       args:
-        TERRARIA_VERSION: ${TERRARIA_VERSION}
+        TML_VERSION: ${TML_VERSION}
     container_name: terraria-server
     ports:
       - "${TERRARIA_PORT}:7777"
@@ -15,6 +15,7 @@ services:
       - TERRARIA_PORT=${TERRARIA_PORT}
     volumes:
       - ./data:/data
+      - ./Steam:/root/Steam
       - ./Terraria:/root/.local/share/Terraria
     stdin_open: true
     tty: true

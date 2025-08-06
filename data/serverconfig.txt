@@ -76,3 +76,9 @@ priority=1
 #journeypermission_setdifficulty=2
 #journeypermission_biomespread_setfrozen=2
 #journeypermission_setspawnrate=2
+
+#Sets the folder where manually installed mods will be loaded from.
+modpath=/root/.local/share/Terraria/tModLoader/Mods
+
+#Sets the mod pack to load, causing only the specified mods to load.
+#modpack=MyModpack
