@@ -6,6 +6,9 @@ A simple and configurable Docker setup for hosting a dedicated **vanilla** Terra
 - 🚀 Simple and fast deployment using Docker Compose
 - 🔁 Automatic startup after VPS startup / restart
 
+> [!IMPORTANT]
+> For a server with mods, use the [tmodloader](https://github.com/ArtoriasCode/docker-terraria/tree/tmodloader) branch.
+
 ## 📥 Project download
 > [!NOTE]
 > To download the project on your VPS server, follow the instructions below.
@@ -19,7 +22,7 @@ sudo apt install git
 ```
 2) Download the repository:
 ```
-git clone https://github.com/ArtoriasCode/docker-terraria.git
+git clone --branch vanilla https://github.com/ArtoriasCode/docker-terraria.git
 ```
 
 ## ⚙️ Server configuration
