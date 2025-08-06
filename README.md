@@ -62,7 +62,8 @@ mkdir -p Terraria/Worlds
 ```
 scp path_to_file server_user@server_id:/path_to_project/Terraria/Worlds
 ```
-Example: `scp /home/artorias/myworld.wld root@127.0.0.1:/root/docker-terraria/Terraria/Worlds`
+> [!TIP]
+> Example: `scp /home/artorias/myworld.wld root@127.0.0.1:/root/docker-terraria/Terraria/Worlds`
 
 3) Change the name of the world in `serverconfig.txt` in the `world` field.
 
