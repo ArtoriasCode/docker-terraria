@@ -6,6 +6,9 @@ A simple and configurable Docker setup for hosting a dedicated **vanilla** Terra
 - 🚀 Simple and fast deployment using Docker Compose
 
 ## 📥 Project download
+> [!NOTE]
+> To download the project on your VPS server, follow the instructions below.
+
 1) Install `git`:
 ```
 sudo apt update
@@ -19,6 +22,9 @@ git clone https://github.com/ArtoriasCode/docker-terraria.git
 ```
 
 ## ⚙️ Server configuration
+> [!NOTE]
+> To create the necessary files for the Terraria server and configure it according to your preferences, follow the instructions below.
+
 1) Navigate to the project directory:
 ```
 cd docker-terraria
@@ -45,6 +51,9 @@ nano data/serverconfig.txt
 9) Save the file by pressing `Ctrl + O`, then close the file by pressing `Ctrl + X`.
 
 ## 🌍 Custom world
+> [!NOTE]
+> If you want to install your own pre-generated world on the server, follow the instructions below.
+
 1) Create a directory with Terraria worlds in the project root directory:
 ```
 mkdir -p Terraria/Worlds
@@ -58,6 +67,9 @@ Example: `scp /home/artorias/myworld.wld root@127.0.0.1:/root/docker-terraria/Te
 3) Change the name of the world in `serverconfig.txt` in the `world` field.
 
 ## 🔨 Installation
+> [!NOTE]
+> To start the automatic installation of the Terraria server in Docker, follow the instructions below.
+
 1) Grant execution rights to the installation script:
 ```
 chmod +x scripts/install.sh
