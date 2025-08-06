@@ -2,8 +2,9 @@
 A simple and configurable Docker setup for hosting a dedicated **vanilla** Terraria server.
 - ⚙️ Fully configurable via `.env` and `serverconfig.txt`
 - 💾 Automatic start via `screen` for auto-saves
-- 🔁 The ability to generate worlds and upload your own
+- 🗺️ The ability to generate worlds and upload your own
 - 🚀 Simple and fast deployment using Docker Compose
+- 🔁 Automatic startup after VPS startup / restart
 
 ## 📥 Project download
 > [!NOTE]
