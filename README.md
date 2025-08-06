@@ -7,6 +7,9 @@ A simple and configurable Docker setup for hosting a dedicated **modded** Terrar
 - 🔁 Automatic startup after VPS startup / restart
 - 💻 Automatic mods download
 
+> [!IMPORTANT]
+> For a server without mods, use the [vanilla](https://github.com/ArtoriasCode/docker-terraria) branch.
+
 ## 📥 Project download
 > [!NOTE]
 > To download the project on your VPS server, follow the instructions below.
