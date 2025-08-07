@@ -114,10 +114,11 @@ chmod +x scripts/install.sh
 ```
 ./scripts/install.sh
 ```
-3) Wait until the installation is complete. It may take longer, depending on the number of mods. You can track the progress by calling the command:
+3) Wait until the installation is complete. 
+4) Now you need to wait until the mods are installed. You can track the progress by calling the command:
 ```
 docker logs -f terraria-server
 ```
-4) When you see the message `Starting tModLoader server in screen session 'terraria'...`, it means that the mods installation is complete. You can exit the log viewer by pressing `Ctrl + Z`. After that, you need to wait for the world to be created / loaded.
+5) When you see the message `Starting tModLoader server in screen session 'terraria'...`, it means that the mods installation is complete. You can exit the log viewer by pressing `Ctrl + Z`. After that, you need to wait for the world to be created / loaded.
 
 To access the server in the game, enter the IP address of your VPS server, the port specified in `.env`, and the password specified in `serverconfig.txt`, if specified.
