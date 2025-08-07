@@ -16,23 +16,27 @@ else
     exit 1
 fi
 
-rm -rf "$MODS_PATH"/*
-mkdir -p "$MODS_PATH"
-
 # Download mods via SteamCMD (anonymously)
 if [ -f "$MODS_LIST" ]; then
     echo "Installing mods via SteamCMD from $MODS_LIST..."
     mkdir -p "$MODS_PATH"
 
     WORKSHOP_DIR="/root/Steam/steamapps/workshop/content/$TML_APPID"
+    mkdir -p "$WORKSHOP_DIR"
 
     while IFS= read -r mod_id || [ -n "$mod_id" ]; do
         if [[ -n "$mod_id" ]]; then
-            echo "Downloading mod ID $mod_id..."
+            mod_dir="$WORKSHOP_DIR/$mod_id"
 
-            "$STEAMCMD" +login anonymous \
-                +workshop_download_item "$TML_APPID" "$mod_id" validate \
-                +quit
+            if [ -d "$mod_dir" ] && find "$mod_dir" -type f -name "*.tmod" | grep -q .; then
+                echo "Mod ID $mod_id already exists. Skipping download."
+            else
+                echo "Downloading mod ID $mod_id..."
+
+                "$STEAMCMD" +login anonymous \
+                    +workshop_download_item "$TML_APPID" "$mod_id" validate \
+                    +quit
+            fi
         fi
     done < "$MODS_LIST"
 
@@ -45,7 +49,6 @@ if [ -f "$MODS_LIST" ]; then
 else
     echo "No mods.txt found — skipping mod installation."
 fi
-
 
 # Function to gracefully stop the server using screen
 function stop_server() {
