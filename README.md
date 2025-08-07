@@ -86,6 +86,8 @@ nano data/mods.txt
 >
 > Mod ID: `2824688072`
 3) Save the file by pressing `Ctrl + O`, then close the file by pressing `Ctrl + X`.
+> [!TIP]
+> If you want to add new mods to an already running server in the future, stop it using the command `docker stop terraria-server`, add the new mods to `mods.txt`, and restart the container with the command `docker compose up --build -d` while in the root directory of the project.
 
 ## 📂 Adding mod configs
 > [!NOTE]
